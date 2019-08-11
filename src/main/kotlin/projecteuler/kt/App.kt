@@ -8,4 +8,6 @@ fun main() {
     println("Problem002: " + Problem002().solve())
     println("Problem004: " + Problem004().solve())
     println("Problem005: " + Problem005().solve())
+    println("Problem006: " + Problem006().solve())
+    println("Problem008: " + Problem008().solve())
 }

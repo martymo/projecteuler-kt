@@ -4,9 +4,14 @@
 package projecteuler.kt
 
 import kotlin.test.Test
+import kotlin.test.assertEquals
 
 class AppTest {
-    @Test fun testMain() {
-        main()
+    @Test fun testProblem006() {
+        assertEquals(25_164_150, Problem006().solve())
+    }
+
+    @Test fun testProblem008() {
+        assertEquals(23514624000L, Problem008().solve())
     }
 }
