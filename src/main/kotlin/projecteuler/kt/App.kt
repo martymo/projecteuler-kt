@@ -10,4 +10,5 @@ fun main() {
     println("Problem005: " + Problem005().solve())
     println("Problem006: " + Problem006().solve())
     println("Problem008: " + Problem008().solve())
+    println("Problem009: " + Problem009().solve())
 }
