@@ -11,4 +11,5 @@ fun main() {
     println("Problem006: " + Problem006().solve())
     println("Problem008: " + Problem008().solve())
     println("Problem009: " + Problem009().solve())
+    println("Problem099: " + Problem099().solve())
 }

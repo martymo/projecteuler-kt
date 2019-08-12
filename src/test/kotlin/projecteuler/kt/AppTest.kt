@@ -18,4 +18,8 @@ class AppTest {
     @Test fun testProblem009() {
         assertEquals(31875000, Problem009().solve())
     }
+
+    @Test fun testProblem099() {
+     assertEquals(709, Problem099().solve())
+    }
 }
