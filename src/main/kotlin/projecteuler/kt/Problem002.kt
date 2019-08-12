@@ -9,23 +9,6 @@
 
 package projecteuler.kt
 
-fun fibs(): Sequence<Int> {
-    return sequence {
-        var f1 = 1
-        var f2 = 2
-
-        yield(f1)
-        yield(f2)
-        yieldAll(
-            generateSequence() {
-                val fn = f1 + f2
-                f1 = f2.also { f2 = fn }
-                fn
-            }
-        )
-    }
-}
-
 class Problem002(val size: Int = 4_000_000) {
     private fun fibs(): Sequence<Int> {
         return sequence {
