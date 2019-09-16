@@ -5,7 +5,7 @@
 // Find the largest palindrome made from the product of two 3-digit
 // numbers.
 
-package projecteuler.kt
+package net.projecteuler.tm700
 
 class Problem004 {
     private fun isPalindrome(number: Int) : Boolean {

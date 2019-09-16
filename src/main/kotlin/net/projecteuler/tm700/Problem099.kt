@@ -1,4 +1,4 @@
-package projecteuler.kt
+package net.projecteuler.tm700
 
 import kotlin.math.log
 

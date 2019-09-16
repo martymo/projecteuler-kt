@@ -1,12 +1,12 @@
-package projecteuler.kt
+package net.projecteuler.tm700
 
 // Sieve
 class PrimeNumbers() {
-    fun getPrime(n: Int): List<Int> {
+    fun getPrime(n: Long): List<Long> {
         // Assuming that all values are primes
-        val isPrime = (2..n).associateWith { true } as MutableMap<Int, Boolean>
+        val isPrime = (2L..n).associateWith { true } as MutableMap<Long, Boolean>
 
-        var factor = 2
+        var factor = 2L
         while (factor * factor <= n) {
             if (isPrime.contains(factor)) {
                 var j = factor
@@ -23,7 +23,7 @@ class PrimeNumbers() {
     }
 
     fun factorize(n: Int): List<Int> {
-        val primes = getPrime(n/2)
+        val primes = getPrime(n/2.toLong()).map { it.toInt() }
         return sequence {
             var factored = n
             for (i in primes) {
@@ -35,3 +35,4 @@ class PrimeNumbers() {
         }.toList()
     }
 }
+

@@ -1,4 +1,4 @@
-package projecteuler.kt
+package net.projecteuler.tm700
 
 class Problem008 {
     val digits = """
