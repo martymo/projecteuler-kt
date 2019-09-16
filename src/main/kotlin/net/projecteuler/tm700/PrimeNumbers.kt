@@ -4,7 +4,9 @@ package net.projecteuler.tm700
 class PrimeNumbers() {
     fun getPrime(n: Long): List<Long> {
         // Assuming that all values are primes
-        val isPrime = (2L..n).associateWith { true } as MutableMap<Long, Boolean>
+        val isPrime = mutableMapOf<Long, Boolean>()
+
+        (2L..n).associateWithTo(isPrime) { true }
 
         var factor = 2L
         while (factor * factor <= n) {
@@ -12,7 +14,7 @@ class PrimeNumbers() {
                 var j = factor
                 while (factor * j <= n) {
                     // Removing every factorth value
-                    isPrime[factor*j] = false
+                    isPrime[factor * j] = false
                     j++
                 }
             }
@@ -23,7 +25,7 @@ class PrimeNumbers() {
     }
 
     fun factorize(n: Int): List<Int> {
-        val primes = getPrime(n/2.toLong()).map { it.toInt() }
+        val primes = getPrime(n / 2.toLong()).map { it.toInt() }
         return sequence {
             var factored = n
             for (i in primes) {
@@ -35,4 +37,3 @@ class PrimeNumbers() {
         }.toList()
     }
 }
-
