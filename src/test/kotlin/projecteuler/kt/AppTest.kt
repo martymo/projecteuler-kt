@@ -20,6 +20,6 @@ class AppTest {
     }
 
     @Test fun testProblem099() {
-     assertEquals(709, Problem099().solve())
+        assertEquals(709, Problem099().solve())
     }
 }

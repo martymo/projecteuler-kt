@@ -11,23 +11,12 @@ package projecteuler.kt
 
 class Problem002(val size: Int = 4_000_000) {
     private fun fibs(): Sequence<Int> {
-        return sequence {
-            var f1 = 1
-            var f2 = 2
-
-            yield(f1)
-            yield(f2)
-            yieldAll(
-                generateSequence() {
-                    val fn = f1 + f2
-                    f1 = f2.also { f2 = fn }
-                    fn
-                }
-            )
-        }
+        return generateSequence(Pair(1, 2), {
+            Pair(it.second, it.first + it.second)
+        }).map { it.first }
     }
 
     fun solve(): Int = fibs().takeWhile { it < size }
-            .filter { it % 2 == 0}
+            .filter { it % 2 == 0 }
             .sum()
 }
