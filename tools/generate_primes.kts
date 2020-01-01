@@ -5,6 +5,7 @@ fun getPrime(n: Long): List<Long> {
     (2L..n).associateWithTo(isPrime) { true }
 
     var factor = 2L
+    // The sieve of Eratosthenes
     while (factor * factor <= n) {
         if (isPrime.contains(factor)) {
             var j = factor
